@@ -32,7 +32,7 @@ if (!$errors) {
 function save_log($name,$organization,$email,$website,$twitter){
 	$link=mysql_connect(DB_HOST, DB_UNAME, DB_PASSWD);
 	mysql_select_db(DB_NAME);
-	$query="INSERT INTO log(name, organization, email, website, twitter) VALUES('{$name}', '{$organization}', '{$email}', '{$website}', '{$twitter}')";
+	$query="INSERT INTO log (name, organization, email, website, twitter) VALUES('{$name}', '{$organization}', '{$email}', '{$website}', '{$twitter}')";
 	$result=mysql_query($query);
 	mysql_close($link);
 	if ($result) return 1;
